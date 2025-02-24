@@ -649,7 +649,7 @@
 
     </footer>
 
-    <div class="overlay">
+    <!-- <div class="overlay">
 
         <div class="feedback-form">
 
@@ -674,16 +674,16 @@
 
             </div>
 
-            <form>
+            <form id="feedback-form">
 
                 <label for="name"></label>
-                <input type="text" name="name" id="name" placeholder="ИМЯ">
+                <input type="text" name="name" id="name" placeholder="ИМЯ" required>
 
                 <label for="phone"></label>
-                <input type="text" name="phone" id="phone" placeholder="ТЕЛЕФОН">
+                <input type="text" name="phone" id="phone" placeholder="ТЕЛЕФОН" required>
 
                 <label for="feedback"></label>
-                <textarea name="feedback" id="feedback" cols="30" rows="10" placeholder="ОТЗЫВ"></textarea>
+                <textarea name="feedback" id="feedback" cols="30" rows="10" placeholder="ОТЗЫВ" required></textarea>
 
                 <button type="submit">ОТПРАВИТЬ</button>
 
@@ -691,7 +691,47 @@
 
         </div>
 
+    </div> -->
+
+    <div class="overlay">
+        <div class="feedback-form">
+            <div class="feedback-form__header">
+                <span>Оставьте свой отзыв</span>
+                <div class="lines">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <g clip-path="url(#clip0_2_523)">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M20 1.84174L18.1583 0L10 8.17121L1.84174 0L0 1.84174L8.17121 10L0 18.1583L1.84174 20L10 11.8288L18.1583 20L20 18.1583L11.8288 10L20 1.84174Z" fill="white"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_2_523">
+                                <rect width="20" height="20" fill="white"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+    
+            <form id="feedback-form">
+                <label for="name"></label>
+                <input type="text" name="name" id="name" placeholder="ИМЯ" required>
+    
+                <label for="phone"></label>
+                <input type="text" name="phone" id="phone" placeholder="ТЕЛЕФОН" required>
+    
+                <label for="feedback"></label>
+                <textarea name="feedback" id="feedback" cols="30" rows="10" placeholder="ОТЗЫВ" required></textarea>
+    
+                <button type="submit">ОТПРАВИТЬ</button>
+            </form>
+    
+            <!-- Сообщение после отправки -->
+            <div class="feedback-success" style="display: none;">
+                <p>Спасибо! Ваш отзыв получен.</p>
+                <button class="close-btn">Закрыть</button>
+            </div>
+        </div>
     </div>
+    
 
 </body>
 </html>

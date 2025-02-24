@@ -623,14 +623,67 @@ marquee {
     cursor: pointer;
 }
 
+/* .overlay {
+    display: none;
+    position: fixed; 
+    left: 0;
+    right: 0;
+    bottom: 0; 
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(25px);
+    justify-content: center; 
+    align-items: center; 
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(100%); 
+}
+
+.overlay.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0); 
+} */
+
+.overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(25px);
+    justify-content: flex-end;
+    align-items: flex-end;
+    z-index: 1;
+    transition: opacity 0.5s ease, transform 0.3s ease;
+    opacity: 0;
+    visibility: hidden; 
+    transform: translateY(100%); 
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible; 
+    transform: translateY(0); 
+}
+
 .feedback-form {
     display: flex;
     flex-direction: column;
     gap: 20px;
 
+    margin: 128px auto;
+
     width: 100%;
     max-width: 628px;
     padding: 40px;
+
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.70);
 }
 
 .feedback-form__header {
@@ -648,7 +701,7 @@ marquee {
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
-    line-height: 20px; /* 125% */
+    line-height: 20px; 
     text-transform: uppercase;
 }
 
@@ -742,6 +795,68 @@ marquee {
 }
 
 .feedback-form form button:hover {
+    background: transparent;
+    border: 1px solid #FFCB00;
+
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 125% */
+    text-transform: uppercase;
+}
+
+.feedback-form form input:invalid, textarea:invalid {
+    border: 2px solid red;
+}
+
+.feedback-form form input:valid, textarea:valid {
+    border: 2px solid green;
+}
+
+.feedback-success {
+    display: flex !important;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;  
+
+    width: 100%;
+    max-width: 600px;
+
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; /* 22.4px */
+    text-transform: uppercase;
+    height: 432px;
+}
+
+.feedback-success p {
+    margin-top: 96px;
+}
+
+.feedback-success button {
+    height: 48px;
+    padding: 14px 20px;
+
+    border-radius: 2px;
+    background: #FFCB00;
+    cursor: pointer;
+    border: 1px solid transparent;
+
+    color: #000;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 125% */
+    text-transform: uppercase;
+}
+
+.feedback-success button:hover {
     background: transparent;
     border: 1px solid #FFCB00;
 
