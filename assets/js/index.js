@@ -162,7 +162,7 @@ const modalMain = () => {
         // Если все поля валидны, показываем сообщение о успешной отправке
         if (isValid) {
             form.style.display = 'none'; // Скрываем форму
-            feedbackSuccess.style.display = 'block'; // Показываем сообщение
+            feedbackSuccess.style.display = 'flex'; // Показываем сообщение
         }
     });
 
