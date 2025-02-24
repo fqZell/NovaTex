@@ -15,6 +15,7 @@ html {
 body {
     font-family: 'Inter', sans-serif;
     background-color: #000;
+    overflow-x: hidden;
 }
 
 input, button {
@@ -142,9 +143,52 @@ img {
     color: #FFCB00;
 }
 
+/* Стиль для контейнера бургер-меню */
 .header-burger {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    transition: transform 0.3s ease;
     display: none;
 }
+
+.burger-line {
+    width: 30px;
+    height: 4px;
+    background-color: #FFCB00;  /* Цвет линий */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Состояние бургер-меню по умолчанию */
+.header-burger .burger-line:nth-child(1) {
+    transform: translateY(0);
+}
+
+.header-burger .burger-line:nth-child(2) {
+    transform: translateY(0);
+}
+
+.header-burger .burger-line:nth-child(3) {
+    transform: translateY(0);
+}
+
+/* Состояние активного меню - бургер превращается в крестик */
+.header-burger.active .burger-line:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);  /* Первая линия: вниз и поворот */
+}
+
+.header-burger.active .burger-line:nth-child(2) {
+    opacity: 0;  /* Скрываем вторую линию */
+}
+
+.header-burger.active .burger-line:nth-child(3) {
+    transform: translateY(-16px) rotate(-45deg);  /* Третья линия: вверх и поворот */
+}
+
 
 .banner-bcc img {
     width: 100vw;
@@ -322,6 +366,7 @@ img {
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%; 
+    gap: 24px;
 }
 
 .information {
@@ -869,6 +914,39 @@ marquee {
     text-transform: uppercase;
 }
 
+.burger-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #090E1A;
+    width: 50%;
+    height: 100vh;
+
+    display: none;
+}
+
+.burger-menu.active {
+    display: block;
+}
+
+.burger-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    justify-content: flex-start;
+
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 142.857% */
+    text-transform: uppercase;
+    position: relative;
+    margin-top: 128px;
+    text-align: left;
+}
+
 @media (min-width: 3000px) {
     .banner-content {
         left: 50%;
@@ -1057,7 +1135,7 @@ marquee {
 
 @media (max-width: 900px) {
     .header-burger {
-        display: block;
+        display: flex;
         cursor: pointer;
     }
 
@@ -1151,6 +1229,17 @@ marquee {
     .footer-wrapper {
         display: flex;
         flex-direction: column;
+    }
+
+    .header-background {
+        background-color: #090E1A;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 100%;
+        height: 100px;
+        z-index: 998;
     }
 }
 

@@ -61,9 +61,20 @@
 
                 </div>
 
-                <div class="header-burger">
+                <!-- <div class="header-burger">
                     <img src="./assets/img/icons/burger.svg" alt="burger">
-                </div>
+                    <svg class="burger-icon" width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect class="line line1" y="11" width="28" height="4" fill="#FFCB00"/>
+                        <rect class="line line2" width="28" height="4" fill="#FFCB00"/>
+                        <rect class="line line3" y="22" width="28" height="4" fill="#FFCB00"/>
+                    </svg>
+                </div> -->
+
+                <div class="header-burger">
+                    <div class="burger-line"></div>
+                    <div class="burger-line"></div>
+                    <div class="burger-line"></div>
+                </div>                
 
             </div>
 
@@ -504,7 +515,7 @@
 
                     </div>
 
-                    <marquee direction="left" scrollamount="20" scrolldelay="0" loop="infinite">
+                    <marquee direction="left" scrollamount="20" scrolldelay="10" loop="infinite">
 
                         <div class="companys">
 
@@ -649,50 +660,6 @@
 
     </footer>
 
-    <!-- <div class="overlay">
-
-        <div class="feedback-form">
-
-            <div class="feedback-form__header">
-
-                <span>Оставьте свой отзыв</span>
-
-                <div class="lines">
-
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <g clip-path="url(#clip0_2_523)">
-                          <path fill-rule="evenodd" clip-rule="evenodd" d="M20 1.84174L18.1583 0L10 8.17121L1.84174 0L0 1.84174L8.17121 10L0 18.1583L1.84174 20L10 11.8288L18.1583 20L20 18.1583L11.8288 10L20 1.84174Z" fill="white"/>
-                        </g>
-                        <defs>
-                          <clipPath id="clip0_2_523">
-                            <rect width="20" height="20" fill="white"/>
-                          </clipPath>
-                        </defs>
-                    </svg>
-
-                </div>
-
-            </div>
-
-            <form id="feedback-form">
-
-                <label for="name"></label>
-                <input type="text" name="name" id="name" placeholder="ИМЯ" required>
-
-                <label for="phone"></label>
-                <input type="text" name="phone" id="phone" placeholder="ТЕЛЕФОН" required>
-
-                <label for="feedback"></label>
-                <textarea name="feedback" id="feedback" cols="30" rows="10" placeholder="ОТЗЫВ" required></textarea>
-
-                <button type="submit">ОТПРАВИТЬ</button>
-
-            </form>
-
-        </div>
-
-    </div> -->
-
     <div class="overlay">
         <div class="feedback-form">
             <div class="feedback-form__header">
@@ -732,6 +699,19 @@
         </div>
     </div>
     
+    <div class="burger-menu">
+
+        <div class="burger-nav">
+
+            <a href="#" class="header-nav__link active">Главная</a>
+            <a href="#" class="header-nav__link">О компании</a>
+            <a href="#" class="header-nav__link">Каталог</a>
+            <a href="#" class="header-nav__link">Новости</a>
+            <a href="#" class="header-nav__link">Контакты</a>
+
+        </div>
+
+    </div>
 
 </body>
 </html>
