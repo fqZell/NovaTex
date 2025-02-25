@@ -306,7 +306,7 @@ img {
     align-items: center;
     gap: 64px;
 
-    max-width: 1150px;
+    max-width: 1080px;
     overflow: hidden;
     overflow-x: scroll;
     scrollbar-width: none;
@@ -997,7 +997,7 @@ marquee {
 
 @media (max-width: 1600px) {
     .manufacturers-services__wrapper {
-        max-width: 800px;
+        max-width: 750px;
         gap: 48px;
     }
 
