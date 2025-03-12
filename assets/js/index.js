@@ -34,19 +34,16 @@ const modalMain = () => {
     
     if (!feedbackEl || !overlayEl || !closeBtn || !form || !feedbackSuccess || !closeSuccessBtn) return false;
 
-    // Открытие модалки
     feedbackEl.addEventListener('click', () => {
         overlayEl.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Блокируем прокрутку на фоне
+        document.body.style.overflow = 'hidden';
     });
 
-    // Закрытие модалки при клике на крестик
     closeBtn.addEventListener('click', () => {
         overlayEl.classList.remove('active');
-        document.body.style.overflow = ''; // Восстанавливаем прокрутку
+        document.body.style.overflow = ''; 
     });
 
-    // Закрытие модалки при клике вне формы (по overlay)
     overlayEl.addEventListener('click', (e) => {
         if (e.target === overlayEl) {
             overlayEl.classList.remove('active');
@@ -54,20 +51,18 @@ const modalMain = () => {
         }
     });
 
-    // Маска для телефона (начинается с +7)
     const phoneInput = document.getElementById('phone');
     phoneInput.addEventListener('input', () => {
-        let value = phoneInput.value.replace(/\D/g, ''); // Убираем все нечисловые символы
+        let value = phoneInput.value.replace(/\D/g, ''); 
         if (value[0] !== '7') {
-            value = '7' + value; // Если номер не начинается с 7, добавляем 7 в начало
+            value = '7' + value; 
         }
         if (value.length > 11) {
-            value = value.slice(0, 11); // Ограничиваем длину номера
+            value = value.slice(0, 11); 
         }
         phoneInput.value = '+' + value.slice(0, 1) + ' (' + value.slice(1, 4) + ') ' + value.slice(4, 7) + '-' + value.slice(7, 9) + '-' + value.slice(9, 11);
     });
 
-    // Валидация формы перед отправкой
     form.addEventListener('submit', (e) => {
         e.preventDefault();
 
@@ -77,7 +72,6 @@ const modalMain = () => {
 
         let isValid = true;
 
-        // Проверка на пустые поля
         if (!name.value.trim()) {
             isValid = false;
             alert('Пожалуйста, заполните поле "ИМЯ"');
@@ -91,22 +85,21 @@ const modalMain = () => {
             alert('Пожалуйста, заполните поле "ОТЗЫВ"');
         }
 
-        // Если все поля валидны, показываем сообщение о успешной отправке
         if (isValid) {
-            form.style.display = 'none'; // Скрываем форму
-            feedbackSuccess.style.display = 'flex'; // Показываем сообщение
+            form.style.display = 'none';
+            feedbackSuccess.style.display = 'flex'; 
         }
     });
 
-    // Закрытие модалки после отправки
     closeSuccessBtn.addEventListener('click', () => {
         overlayEl.classList.remove('active');
-        document.body.style.overflow = ''; // Восстанавливаем прокрутку
+        document.body.style.overflow = ''; 
     });
 };
 
 const scrollManufacturers = () => {
     const wrapper = document.querySelector('.manufacturers-services__wrapper');
+    if (!wrapper) return false;
 
     wrapper.addEventListener('wheel', function(e) {
         if (e.deltaY !== 0) {
@@ -116,27 +109,6 @@ const scrollManufacturers = () => {
     });
 
 }
-
-// const burgerMenu = () => {
-//     const burgerOpen = document.querySelector('.header-burger');
-//     if (!burgerOpen) return false;
-
-//     const burgerMenu = document.querySelector('.burger-menu');
-//     if (!burgerMenu) return false;
-
-//     burgerOpen.addEventListener("click", () => {
-//         const isActive = burgerMenu.classList.contains('active');
-        
-//         // Если меню открыто
-//         if (isActive) {
-//             burgerMenu.classList.remove('active'); 
-//             document.body.style.overflow = ''; 
-//         } else {
-//             burgerMenu.classList.add('active'); 
-//             document.body.style.overflow = 'hidden'; 
-//         }
-//     });
-// };
 
 const burgerMenu = () => {
     const burgerOpen = document.querySelector('.header-burger');
@@ -159,12 +131,68 @@ const burgerMenu = () => {
     });
 }
 
+const swiperAbout = () => {
+    var swiper = new Swiper(".mySwiper-about", {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        freeMode: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+            300: {
+                slidesPerView: 3, 
+                spaceBetween: 10,
+              },
+            640: {
+              slidesPerView: 3, 
+              spaceBetween: 10,
+            },
+            768: {
+              slidesPerView: 3, 
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 3, 
+              spaceBetween: 30,
+            },
+            1200: {
+                slidesPerView: 4, 
+                spaceBetween: 30,
+            }
+          }
+    });
+}
+
+const aboutPhotoClick = () => {
+    const aboutEl = document.querySelectorAll('.mySwiper-about .swiper-slide')
+
+    const aboutPhoto = document.querySelector('.about-photo__wrapper img')
+    
+    if (!aboutEl || !aboutPhoto) return false
+
+    aboutEl.forEach(el => {
+        el.addEventListener("click", () => {
+
+            const srcValue = el.querySelector('img')
+
+            if (srcValue) {
+                aboutPhoto.src = srcValue.src
+            }
+
+        })
+    });
+}
+
 const init = () => {
     swiperMain()
     scrollHeader()
     modalMain()
     scrollManufacturers()
     burgerMenu()
+    swiperAbout()
+    aboutPhotoClick()
 }
 
 document.addEventListener("DOMContentLoaded", init)
