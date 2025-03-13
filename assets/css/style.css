@@ -1103,6 +1103,81 @@ marquee {
     height: 730px;
 }
 
+.banner-content__btn.catalog {
+    right: initial;
+}
+
+.banner-content__btn.catalog .banner-btn__link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.banner-content__btn.catalog .banner-btn__el .banner-btn__link {
+    position: absolute;
+    top: 0;
+    left: 5%;
+    right: 0;
+}
+
+.banner-content__btn.catalog .banner-btn__el .banner-btn__link a {
+    position: initial;
+}
+
+.catalog-wrapper__pages {
+    margin-top: 46px;
+
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap; */
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 30px;
+}
+
+.catalog-item__pages {
+    max-width: 347px;
+    max-height: 298px;
+
+    cursor: pointer;
+
+    position: relative;
+
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.catalog-item__pages img {
+    border-radius: 8px;
+}
+
+.catalog-item__pages:hover img {
+    scale: 1.1;
+}
+
+.catalog-title__pages {
+    position: absolute;
+    bottom: 20px;
+
+    width: 325px;
+    background: rgba(0, 0, 0, 0.70);
+    padding: 12px 20px;
+
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 125% */
+    text-transform: uppercase;
+
+    border-radius: 0 0 20px 0;
+}
+
 @media (min-width: 3000px) {
     .banner-content {
         left: 50%;
@@ -1155,7 +1230,7 @@ marquee {
     }
 
     .banner-content__btn {
-        top: 53%;
+        top: 43%;
     }
 }
 
@@ -1389,6 +1464,10 @@ marquee {
     .about-photo__wrapper .about-photo__main {
         height: 476px;
     }
+
+    .catalog-wrapper__pages {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @media (max-width: 1000px) {
@@ -1529,6 +1608,10 @@ marquee {
     .about-photo__wrapper .about-photo__main {
         height: 350px;
     }
+
+    .catalog-wrapper__pages {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 600px) {
@@ -1603,5 +1686,11 @@ marquee {
 
     .about-photo__wrapper .about-photo__main {
         height: 166px;
+    }
+
+    .catalog-wrapper__pages {
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        align-items: center;
     }
 }

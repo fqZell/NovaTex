@@ -1,7 +1,7 @@
 const scrollHeader = () => {
     window.addEventListener("scroll", function () {
         const header = document.querySelector(".header-background");
-        if (window.scrollY > window.innerHeight) { 
+        if (window.scrollY > window.innerHeight/2) { 
             header.classList.add("scrolled");
         } else {
             header.classList.remove("scrolled");
