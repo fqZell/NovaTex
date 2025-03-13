@@ -263,7 +263,7 @@ img {
     position: absolute;
     top: 0;
     bottom: 20%;
-    left: 0;
+    left: 5%;
     right: 0;
 
     display: flex;
@@ -1105,6 +1105,7 @@ marquee {
 
 .banner-content__btn.catalog {
     right: initial;
+    left: 5%;
 }
 
 .banner-content__btn.catalog .banner-btn__link {
@@ -1117,13 +1118,20 @@ marquee {
 
 .banner-content__btn.catalog .banner-btn__el .banner-btn__link {
     position: absolute;
-    top: 0;
-    left: 5%;
+    top: -5%;
+    left: 0;
     right: 0;
 }
 
 .banner-content__btn.catalog .banner-btn__el .banner-btn__link a {
     position: initial;
+
+    color: #000;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 120%; /* 19.2px */
 }
 
 .catalog-wrapper__pages {
@@ -1136,6 +1144,7 @@ marquee {
 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
 
     gap: 30px;
 }
@@ -1176,6 +1185,43 @@ marquee {
     text-transform: uppercase;
 
     border-radius: 0 0 20px 0;
+}
+
+.services-info__wrapper {
+    margin-top: 128px;
+    position: relative;
+}
+
+.services-categories {
+    display: grid;
+    grid-template-columns: repeat(4, 3fr);
+    justify-items: center;
+    gap: 64px 32px;
+
+    position: absolute;
+    top: 64px;
+    bottom: 64px;
+    left: 64px;
+    right: 64px;
+}
+
+.services-category {
+    flex: 1;
+
+    max-width: 313px;
+    max-height: 193px;
+
+    color: #FFF;
+    text-align: center;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 28.6px */
+}
+
+.services-category img {
+    width: 80px;
+    height: 80px;
 }
 
 @media (min-width: 3000px) {
@@ -1251,6 +1297,10 @@ marquee {
 
     marquee {
         width: 1000px;
+    }
+
+    .banner-content__btn {
+        top: 47%;
     }
 }
 
@@ -1369,6 +1419,14 @@ marquee {
     .about-photo__wrapper .about-photo__main {
         height: 642px;
     }
+
+    .services-categories {
+        grid-template-columns: repeat(3, 4fr);
+    }
+
+    .services-info__wrapper .services-info__bcc {
+        height: 1050px;
+    }
 }
 
 @media (max-width: 1245px) {
@@ -1467,6 +1525,15 @@ marquee {
 
     .catalog-wrapper__pages {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .services-categories {
+        grid-template-columns: repeat(2, 5fr);
+    }
+
+    .services-info__wrapper .services-info__bcc {
+        height: 1100px;
+        object-fit: cover;
     }
 }
 
@@ -1612,6 +1679,20 @@ marquee {
     .catalog-wrapper__pages {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .services-categories {
+        top: 16px;
+        bottom: 16px;
+        left: 16px;
+        right: 16px;
+    }
+
+    .services-category {
+        font-size: 16px;
+        gap: 8px;
+        max-width: 200px;
+        max-height: 200px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -1652,13 +1733,17 @@ marquee {
     }
 
     .banner-content__btn {
-        top: 25%;
+        top: 35%;
     }
 }
 
 @media (max-width: 500px) {
     .banner-content {
         left: 5%;
+    }
+
+    .banner-content.about {
+        top: 20%;
     }
 
     .manufacturers-txt {
