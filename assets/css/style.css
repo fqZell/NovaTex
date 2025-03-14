@@ -199,7 +199,7 @@ img {
 .banner-content {
     position: absolute;
     top: 35%;
-    bottom: 0;
+    bottom: 100%;
     left: 10%;
 }
 
@@ -1224,6 +1224,133 @@ marquee {
     height: 80px;
 }
 
+.footer-pages__wrapper {
+    margin-top: 128px;
+}
+
+.footer-pages__rows {
+    border-radius: 10px 10px 0px 0px;
+    background: rgba(255, 255, 255, 0.20);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 32px;
+}
+
+.footer-pages__row {
+    /* max-width: 691px; */
+    width: 100%;
+}
+
+.footer-pages__row h3{
+    color: #FFF;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%; /* 31.2px */
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.footer-pages__row a{
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 23.4px */
+
+    margin-top: 8px;
+}
+
+.footer-pages__header .footer-pages__rows:last-child {
+    border-radius: 0px 0px 10px 10px;
+    background: rgba(255, 255, 255, 0.10);
+}
+
+.footer-pages__main {
+    margin-top: 30px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-pages__main .footer-pages__col {
+    /* max-width: 724px; */
+    width: 100%;
+    flex: 1;
+}
+
+.footer-pages__main .footer-pages__rows {
+    /* max-width: 724px; */
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+}
+
+.footer-pages__main .footer-pages__rows {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+}
+
+.footer-pages__main .footer-pages__rows .footer-pages__row {
+    /* max-width: 724px; */
+    width: 100%;
+}
+
+.footer-pages__main .footer-pages__rows .footer-pages__row:first-child {
+    border-radius: 10px 10px 0px 0px;
+    background: rgba(255, 255, 255, 0.20);
+    padding: 32px;
+
+    color: #FFF;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%; /* 31.2px */
+    text-transform: uppercase;
+    height: 100%;
+}
+
+.footer-pages__main .footer-pages__rows .footer-pages__row:last-child {
+    border-radius: 0px 0px 10px 10px;
+    background: rgba(255, 255, 255, 0.10);
+    padding: 32px;
+
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%; /* 23.4px */
+    text-transform: uppercase;
+    height: 100%;
+    max-height: 150px;
+}
+
+.footer-pages__main .footer-pages__rows .footer-pages__row:last-child p {
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 130%; /* 23.4px */
+    margin-top: 8px;
+}
+
+.footer-pages__main .footer-pages__rows .footer-pages__row:last-child a {
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 130%; 
+}
+
 @media (min-width: 3000px) {
     .banner-content {
         left: 50%;
@@ -1467,7 +1594,7 @@ marquee {
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
     .information-logo {
         display: none;
     }
@@ -1534,6 +1661,22 @@ marquee {
     .services-info__wrapper .services-info__bcc {
         height: 1100px;
         object-fit: cover;
+    }
+
+    .footer-pages__row h3 {
+        font-size: 20px;
+    }
+
+    .footer-pages__row a {
+        font-size: 16px;
+    }
+
+    .footer-pages__main .footer-pages__rows .footer-pages__row:last-child {
+        font-size: 16px;
+    }
+
+    .footer-pages__main .footer-pages__rows .footer-pages__row:last-child a {
+        font-size: 16px;
     }
 }
 
@@ -1615,8 +1758,24 @@ marquee {
         display: grid;
         grid-template-columns: repeat(2, 1fr); 
         grid-template-rows: repeat(2, auto);  
-        gap: 20px;
-      
+        gap: 20px; 
+    }
+
+    .footer-pages__main {
+        flex-direction: column;
+    }
+
+    .footer-pages__rows {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .footer-pages__main .footer-pages__col .footer-pages__rows {
+        gap: 0;
+    }
+
+    .footer-pages__main .footer-pages__rows .footer-pages__row:last-child {
+        max-height: max-content;
     }
 }
 
