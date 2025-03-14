@@ -185,6 +185,22 @@ const aboutPhotoClick = () => {
     });
 }
 
+const selectNews = () => {
+    // const selectEl = document.querySelector(".news-select__wrapper select");
+
+    // const arrowEl = document.querySelector(".news-select__arrow svg")
+
+    // if (!selectEl || !arrowEl) return;
+
+    // selectEl.addEventListener("click", () => {
+
+    //     arrowEl.style.transform = 'rotate(180deg)'
+
+    // })
+
+
+};
+
 const init = () => {
     swiperMain()
     scrollHeader()
@@ -193,6 +209,7 @@ const init = () => {
     burgerMenu()
     swiperAbout()
     aboutPhotoClick()
+    selectNews()
 }
 
 document.addEventListener("DOMContentLoaded", init)

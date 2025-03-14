@@ -11,12 +11,12 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="../assets/css/style.css">
     <script src="../assets/js/index.js" defer></script>
-    <title>Услуги</title>
+    <title>Новость</title>
 </head>
 <body>
     
     <div class="banner-bcc about">
-        <img src="../assets/img/servicesBanner.png" alt="banner">
+        <img src="../assets/img/newsBanner.png" alt="banner">
     </div>
     
     <header>
@@ -76,7 +76,7 @@
     <div class="banner-content about">
 
         <h2>
-            Услуги
+            новость
         </h2>
 
     </div>
@@ -90,9 +90,9 @@
 
             <div class="banner-btn__link">
                 
-                <a href="../index.html">Главная</a>
+                <a href="./news.html">Новости</a>
                 /
-                <a href="./services.html">Услуги</a>
+                <a href="./newsItem.html">Новость</a>
 
             </div>
         </div>
@@ -101,133 +101,119 @@
 
     <main>
 
-        <section id="services-info">
+        <div class="news-select__wrapper container">
 
-            <div class="services-info__wrapper container">
+            <div class="news-select__txt">Архив</div>
+            
+            <div class="news-select__option">
 
-                <img class="services-info__bcc" src="../assets/img/services/servicesBcc.png" alt="bcc">
+                <select name="date" id="date">
+                    <option value="value">Выберите месяц</option>
+                    <option value="March">Март</option>
+                    <option value="February">Февраль</option>
+                    <option value="January">Январь</option>
+                </select>
+                <div class="news-select__arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="39" height="19" viewBox="0 0 39 19" fill="none">
+                        <g clip-path="url(#clip0_179_1896)">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.3743 16.0825L9.41734 7.12555L11.6562 4.88672L19.4937 12.7242L27.3312 4.88672L29.57 7.12555L20.6131 16.0825C20.3162 16.3793 19.9135 16.546 19.4937 16.546C19.0738 16.546 18.6712 16.3793 18.3743 16.0825Z" fill="black"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_179_1896">
+                        <rect width="19" height="38" fill="white" transform="translate(38.5) rotate(90)"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                </div>
 
-                <div class="services-categories">
+            </div>
 
-                    <div class="services-category">
+        </div>
 
-                        <img src="../assets/img/services/servicesIcons.svg" alt="icons">
+        <section id="news-item" class="container">
 
-                        <div class="services-category__title">
+            <div class="title-wrapper">
 
-                            Техническое обслуживание автотранспорта 
-                            (текущий и капитальный ремонт)
+                <h2>
+                    Открыты вакансии
+                </h2>
 
+                <svg xmlns="http://www.w3.org/2000/svg" width="111" height="8" viewBox="0 0 111 8" fill="none">
+                    <rect width="105.097" height="9.37675" transform="matrix(1 0 -0.573577 0.819152 5.3783 0)" fill="#FFCB00"/>
+                </svg>
+
+            </div>
+
+            <div class="news-item__wrapper">
+
+                <div class="news-item__img">
+
+                    <img src="../assets/img/newsItem/newsItem.jpg" alt="item">
+
+                </div>
+
+                <div class="news-item__content">
+
+                    <span>
+                        В связи с расширением открыты вакансии:
+                    </span>
+
+
+                    <p>
+                        Автоэлектрик по ремонту грузовых автомобилей и дорожно-строительной техники
+                        Автомеханик — автослесарь по ремонту грузовых автомобилей и дорожно-строительной техники
+                        Менеджер по продаже запасных частей
+                        Администратор автосалона
+                        Сервисный инженер
+                        Опыт желателен, но не обязателен, предусмотрено обучение.
+                        Официальное оформление, высокая и стабильная зарплата, отличные условия для роста.
+                        Иногородним предоставляется жилье.
+                    </p>
+
+                    <p>
+                        Подробности уточняйте по телефону: +7 (3462) 38-37-57, 77-42-70
+                        Мессенджеры: +7 (932) 438-37-57
+                        E-mail для резюме: ok@novotekh-surgut.ru
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="about-photo">
+
+            <div class="title-wrapper container">
+
+                <h2>
+                    МЕДИА-МАТЕРИАЛЫ
+                </h2>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="111" height="8" viewBox="0 0 111 8" fill="none">
+                    <rect width="105.097" height="9.37675" transform="matrix(1 0 -0.573577 0.819152 5.3783 0)" fill="#FFCB00"/>
+                </svg>
+
+            </div>
+
+            <div class="about-photo__wrapper container">
+
+                <img class="about-photo__main" src="../assets/img/about/aboutMain.jpg" alt="about-main">
+
+                <div class="about-photo__slider">
+
+                    <div class="swiper mySwiper-about">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide"><img src="../assets/img/about/aboutMain.jpg" alt="about-main"></div>
+                          <div class="swiper-slide"><img src="../assets/img/aboutBanner.png" alt="about-main"></div>
+                          <div class="swiper-slide"><img src="../assets/img/banner.png" alt="about-main"></div>
+                          <div class="swiper-slide"><img src="../assets/img/about/aboutMain.jpg" alt="about-main"></div>
+                          <div class="swiper-slide"><img src="../assets/img/about/aboutMain.jpg" alt="about-main"></div>
+                          <div class="swiper-slide"><img src="../assets/img/about/aboutMain.jpg" alt="about-main"></div>
+                          <div class="swiper-slide"><img src="../assets/img/about/aboutMain.jpg" alt="about-main"></div>
+                          <div class="swiper-slide"><img src="../assets/img/about/aboutMain.jpg" alt="about-main"></div>
+                          <div class="swiper-slide"><img src="../assets/img/about/aboutMain.jpg" alt="about-main"></div>
                         </div>
-
-                    </div>
-
-                    <div class="services-category">
-
-                        <img src="../assets/img/services/servicesIcons2.svg" alt="icons">
-
-                        <div class="services-category__title">
-
-                            Ремонт двигателей
-
-                        </div>
-
-                    </div>
-
-                    <div class="services-category">
-
-                        <img src="../assets/img/services/servicesIcon3.svg" alt="icons">
-
-                        <div class="services-category__title">
-
-                            Ремонт трансмиссии
-
-                        </div>
-
-                    </div>
-
-                    <div class="services-category">
-
-                        <img src="../assets/img/services/servicesIcons4.svg" alt="icons">
-
-                        <div class="services-category__title">
-
-                            Диагностика и ремонт электрооборудования
-
-                        </div>
-
-                    </div>
-
-                    <div class="services-category">
-
-                        <img src="../assets/img/services/servicesIcons5.svg" alt="icons">
-
-                        <div class="services-category__title">
-
-                            Малярно-рихтовочные работы
-
-                        </div>
-
-                    </div>
-
-                    <div class="services-category">
-
-                        <img src="../assets/img/services/servicesIcons6.svg" alt="icons">
-
-                        <div class="services-category__title">
-
-                            Ремонт тормозной системы
-
-                        </div>
-
-                    </div>
-
-                    <div class="services-category">
-
-                        <img src="../assets/img/services/servicesIcons7.svg" alt="icons">
-
-                        <div class="services-category__title">
-
-                            Ремонт рулевого управления
-
-                        </div>
-
-                    </div>
-
-                    <div class="services-category">
-
-                        <img src="../assets/img/services/servicesIcons8.svg" alt="icons">
-
-                        <div class="services-category__title">
-
-                            Ремонт автоматической коробки передач
-
-                        </div>
-
-                    </div>
-
-                    <div class="services-category">
-
-                        <img src="../assets/img/services/servicesIcons9.svg" alt="icons">
-
-                        <div class="services-category__title">
-
-                            Пескоструйная обработка
-
-                        </div>
-
-                    </div>
-
-                    <div class="services-category">
-
-                        <img src="../assets/img/services/servicesIcons10.svg" alt="icons">
-
-                        <div class="services-category__title">
-
-                            Гарантийное обсуживание
-
-                        </div>
-
                     </div>
 
                 </div>
