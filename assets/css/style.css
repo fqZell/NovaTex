@@ -200,7 +200,8 @@ img {
     position: absolute;
     top: 35%;
     bottom: 100%;
-    left: 10%;
+    left: 0 !important;
+    right: 0 !important;
 }
 
 .banner-content h2 {
