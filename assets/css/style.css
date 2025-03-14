@@ -1547,6 +1547,10 @@ select::-ms-expand {
     margin-top: 16px;
 }
 
+.banner-btn__el svg{
+    width: 250px;
+}
+
 @media (min-width: 3000px) {
     .banner-content {
         left: 50%;
@@ -1772,7 +1776,7 @@ select::-ms-expand {
     }
 
     .banner-btn__el svg{
-        width: 300px;
+        width: 250px;
     }
 
     .manufacturers-wrapper.about .manufacturers-txt {
