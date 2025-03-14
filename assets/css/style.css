@@ -1436,7 +1436,7 @@ select::-ms-expand {
 .news-btn {
     margin-top: 30px;
     padding: 20px;
-    margin-left: auto;
+    margin-left: 41%;
     margin-right: auto;
 
     display: flex;
@@ -1749,6 +1749,10 @@ select::-ms-expand {
 
     .services-info__wrapper .services-info__bcc {
         height: 1050px;
+    }
+
+    .news-btn {
+        margin-left: auto;
     }
 }
 
